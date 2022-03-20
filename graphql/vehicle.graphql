@@ -17,5 +17,5 @@ type Vehicle {
 }
 
 type Mutation {
-  updateVehicle(id: ID!, type: String!, tonnage: Int!): Vehicle! @update
+  updateVehicle(id: ID!, type: String!, tonnage: Int!): Vehicle! @update @guard
 }
