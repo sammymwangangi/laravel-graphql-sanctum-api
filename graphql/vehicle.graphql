@@ -1,0 +1,21 @@
+extend type Query {
+
+    vehicles: [Vehicle!]! @all
+
+    vehicle(id: Int! @eq): Vehicle @find
+}
+
+type Vehicle {
+  id: ID!
+  registration_no: Int!
+  manufatured_year: String!
+  type: String!
+  tonnage: Int!
+  
+  "Relationship"
+  user: User! @belongsTo
+}
+
+type Mutation {
+  updateVehicle(id: ID!, type: String!, tonnage: Int!): Vehicle! @update
+}
