@@ -3,3 +3,5 @@
 #import vehicle.graphql
 
 #import auth.graphql
+
+#import sanctum.graphql
